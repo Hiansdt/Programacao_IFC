@@ -1,0 +1,15 @@
+<meta charset="UTF-8">
+<script>
+    const mediaAnual = Number(prompt("Digite a média anual"))
+    const faltas = Number(prompt("Digite a quantidade de faltas"))
+    const aulas = Number(prompt("Digite o número de aulas ministradas no ano"))
+
+    if (mediaAnual < 7 && ((1/(aulas/faltas))*100) > 25) {
+        document.write(`Reprovado por faltas e média.`)
+    } else if (mediaAnual > 7 && ((1/(aulas/faltas))*100) > 25 ) {
+        document.write(`Reprovado por faltas.`)
+    } else if (mediaAnual > 7 && ((1/(aulas/faltas))*100) < 25) {
+        document.write(`Aprovado`)
+    } else if (mediaAnual < 7 && ((1/(aulas/faltas))*100) < 25) {
+        document.write(`Em exame final.`)
+    }

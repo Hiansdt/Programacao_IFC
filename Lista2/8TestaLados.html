@@ -1,18 +1,18 @@
 <meta charset="UTF-8">
 <script>
-    const lado1 = Number(prompt("Digite o tamanho do primeiro lado do triângulo"))
-    const lado2 = Number(prompt("Digite o tamanho do segundo lado do triângulo"))
-    const lado3 = Number(prompt("Digite o tamanho do terceiro lado do triângulo"))
+    const a = Number(prompt("Digite o tamanho do primeiro lado do triângulo"))
+    const b = Number(prompt("Digite o tamanho do segundo lado do triângulo"))
+    const c = Number(prompt("Digite o tamanho do terceiro lado do triângulo"))
 
-    if (lado1 + lado2 > lado3 && lado2 + lado3 > lado1 && lado1 + lado3 > lado2) {
-        if (lado1 === lado2 && lado2 ===lado3) {
-            document.write(`O triângulo é equilátero.`)
-        } else if (((lado1 === lado3) && (lado1 !== lado2)) || ((lado2 === lado3) && (lado1 !== lado2))) {
-            document.write(`O triângulo é isósceles.`)
-        } else if (lado1 !== lado2 && lado2 !== lado3 && lado1 !==lado3) {
-            document.write(`O triângulo é escaleno`)
-        } 
-    } else {
-        document.write("Não é um triângulo.")
-    }
+    if (a + b > c && b + c > a && a + c > b) {
+                    if (a === b && b ===c) {
+                        document.write(`Triângulo equilátero`)
+                    } else if (((a === c) && (a !== b)) || ((b === c) && (a !== b) || a === b && b !== c)) {
+                        document.write(`Triângulo isósceles`)
+                    } else if (a !== b && b !== c && a !==c) {
+                        document.write(`Triângulo escaleno`)
+                    } 
+                } else {
+                    document.write(`Não é um triângulo.`)
+                }
 </script>

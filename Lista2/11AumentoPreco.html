@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<script>
+    const precoAntes = Number(prompt("Qual é o preço ants do aumento?"))
+
+    if (precoAntes <= 280 ) {
+        document.write(`O preço teve um aumento de 20%. Agora o preço é R$${(precoAntes*0.2)+precoAntes}`)
+    } else if (precoAntes <= 700 ) {
+        document.write(`O preço teve um aumento de 15%. Agora o preço é R$${(precoAntes*0.15)+precoAntes}`)
+    } else if (precoAntes <= 1500) {
+        document.write(`O preço teve um aumnto de 10%. Agora o preço é de R$${(precoAntes*0.1)+precoAntes}`)
+    } else if (precoAntes > 1500 ) {
+        document.write(`O preço teve um aumento de 5%. Agora o preço é de R$${(precoAntes*0.05)+precoAntes}`)
+    }
+</script>
