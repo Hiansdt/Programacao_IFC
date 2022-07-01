@@ -4,8 +4,12 @@
 
     let conceito
 
-    if (nota >= 9 && nota >= 10 ) {
-        conceito = toString
+    if (nota >= 9 && nota <= 10) {
+        conceito = toString("A")
+    } else if (nota >= 8 && nota <= 8.9) {
+        conceito = toString("B")
+    } else if (nota >= 7 && nota <= 7.9) {
+        conceito + toString("C")
     }
 
     document.write(`A sua nota é ${nota} e convertendo para conceito, ela é ${conceito}`)
