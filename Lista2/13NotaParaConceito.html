@@ -2,9 +2,11 @@
 <script>
     const nota = Number(prompt("Digite a nota"))
 
-    let conceito = "?"
+    let conceito
 
-    
+    if (nota >= 9 && nota >= 10 ) {
+        conceito = toString
+    }
 
-    document.write(`A sua nota é ${nota} e convertendo para conceito, ela é`)
-</script>  git config --global user.name "Your Name"
+    document.write(`A sua nota é ${nota} e convertendo para conceito, ela é ${conceito}`)
+</script>
