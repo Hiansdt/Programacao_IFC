@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+
+    function imc(peso, altura) {
+        return peso / altura ** 2
+    }
+    let parametrosParaPerguntas = imc(Number(prompt("Digite seu peso")),Number(prompt("Digite sua altura")))
+
+    if (parametrosParaPerguntas <= 18.5) {
+        var classificacao = "subpeso"
+    } else if (parametrosParaPerguntas <=25.0) {
+        var classificacao = "normal"
+    } else if (parametrosParaPerguntas <= 30) {
+        var classificacao = "sobrepeso"
+    } else if (parametrosParaPerguntas > 30) {
+        var classificacao = "obeso"
+    }
+
+    document.write(`Seu imc é ${parametrosParaPerguntas.toFixed(2)} (${classificacao})`)
+</script>
