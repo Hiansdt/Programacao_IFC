@@ -5,14 +5,14 @@
     const c = Number(prompt("Digite o tamanho do terceiro lado do triângulo"))
 
     if (a + b > c && b + c > a && a + c > b) {
-                    if (a === b && b ===c) {
-                        document.write(`Triângulo equilátero`)
-                    } else if (((a === c) && (a !== b)) || ((b === c) && (a !== b) || a === b && b !== c)) {
+        if (a === b && b ===c) {
+            document.write(`Triângulo equilátero`)
+            } else if (((a === c) && (a !== b)) || ((b === c) && (a !== b) || a === b && b !== c)) {
                         document.write(`Triângulo isósceles`)
-                    } else if (a !== b && b !== c && a !==c) {
+            } else if (a !== b && b !== c && a !==c) {
                         document.write(`Triângulo escaleno`)
-                    } 
-                } else {
+            } 
+            } else {
                     document.write(`Não é um triângulo.`)
-                }
+            }
 </script>

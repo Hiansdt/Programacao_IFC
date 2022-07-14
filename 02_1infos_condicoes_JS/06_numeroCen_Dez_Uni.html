@@ -11,41 +11,31 @@
     */
     
     const numero = Number(prompt("Digite um número menor que 1000"))
-    
-    const centenas = Math.floor(numero/100)
-    const dezenas = Math.floor((numero - Math.floor(numero/100)*100)/10)
-    const unidades = numero - Math.floor(numero/10)*10
-    
-    if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    } else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }else if (centenas => 2 && dezenas => 2 && unidades => 2) {
-        document.write(`O número ${numero} contém ${centenas} centenas, ${dezenas} dezenas e ${unidades} unidades.`)
-    }
+
+    let centenas = ""
+    let dezenas = ""
+    let unidades = ""
+
+    if (numero >= 200 && numero < 1000) {
+        centenas = (`${Math.floor(numero/100)}*100`)
+        centenafator = (`${centenas/100} centenas`)
+        Numero = numero - centenas
+    } else if (numero <= 199 && numero >= 100) {
+        centenafator = (`1 centena`)
+    } else {}
+
+    if (numero >= 20 && numero % 10 !== 0) {
+        dezenas = (`${Math.floor((numero-(Math.floor(numero/100))*100)/10)}`)
+    } else if (numero >= 10 && numero < 20) {
+        dezenas = (`1 dezena`)
+    } else {}
+
+    if (numero >= 2 && numero < 1000) {
+        unidades = (`${Math.floor(numero/10)*10 - numero}`)
+    } else if (numero == 1) {
+        unidades = (`1 unidade`)
+    } else {}
+
+    document.write(`${numero} = ${centenafator}, ${dezenas}, ${unidades}`)
 
 </script>
