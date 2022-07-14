@@ -1,0 +1,32 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia três números e mostre-os em ordem decrescente.
+    */
+
+    const numero1 = Number(prompt("Digite o primeiro número:"))
+    const numero2 = Number(prompt("Digite o segundo número:"))
+    const numero3 = Number(prompt("Digite o terceiro número:"))
+
+    123
+    321
+    213
+    132
+    312
+
+    if (numero1 > numero2 && numero2 > numero3) {
+        var sequencia = [numero1,numero2,numero3]
+    } else if (numero3 > numero2 && numero2 > numero1) {
+        var sequencia = [numero3, numero2, numero1]
+    } else if (numero2 > numero1 && numero1 > numero3) {
+        var sequencia = [numero2, numero1, numero3]
+    } else if (numero1 > numero3 && numero3 > numero2) {
+        var sequencia = [numero1, numero3, numero2]
+    } else if (numero3 > numero1 && numero1 > numero2) {
+        var sequencia = [numero3, numero1, numero2]
+    }
+
+
+    document.write(sequencia)
+
+</script>
