@@ -10,32 +10,32 @@
     Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
     
-    const numero = Number(prompt("Digite um número menor que 1000"))
-
-    let centenas = ""
-    let dezenas = ""
-    let unidades = ""
+    let numero = Number(prompt("Digite um número menor que 1000"))
+    let mensagem = (`${numero}`)
 
     if (numero >= 200 && numero < 1000) {
-        centenas = (`${Math.floor(numero/100)}*100`)
-        centenafator = (`${centenas/100} centenas`)
-        Numero = numero - centenas
+        mensagem = (` ${Math.floor(numero/100)} centenas, `)
+        numero = numero - Math.floor(numero/100)*100
     } else if (numero <= 199 && numero >= 100) {
-        centenafator = (`1 centena`)
+        mensagem = (`1 centena`)
+        numero = numero - Math.floor(numero/100)*100
     } else {}
 
     if (numero >= 20 && numero % 10 !== 0) {
-        dezenas = (`${Math.floor((numero-(Math.floor(numero/100))*100)/10)}`)
+        mensagem = mensagem + (` ${Math.floor(numero/10)} dezenas, `)
+        numero = numero - mensagem*10
     } else if (numero >= 10 && numero < 20) {
-        dezenas = (`1 dezena`)
+        mensagem = mensagem + (`1 dezena, `)
+        numero = numero - mensagem*10
     } else {}
 
     if (numero >= 2 && numero < 1000) {
-        unidades = (`${Math.floor(numero/10)*10 - numero}`)
+        mensagem = mensagem + (` ${numero} unidades.`)
+        unidades = (`${numero}`)
     } else if (numero == 1) {
-        unidades = (`1 unidade`)
+        mensagem = mensagem + (` ${numero} unidades.`)
     } else {}
 
-    document.write(`${numero} = ${centenafator}, ${dezenas}, ${unidades}`)
+    document.write(`${mensagem}`)
 
 </script>
