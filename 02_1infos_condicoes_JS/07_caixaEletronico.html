@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     /*
     //PROBLEMA
@@ -7,13 +8,29 @@
     Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
     */
 
-    //ENTRADA
+    let ValorSaque = parseInt(prompt(`Qual o valor do saque?`))
 
+    let mensagem = ""
 
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
+    if (ValorSaque >=10 && ValorSaque <=600) {
+        const notasDeCem = Math.floor(ValorSaque/100)
+        ValorSaque = ValorSaque % 100
+        const notasDeCinquenta = Math.floor(ValorSaque/50)
+        ValorSaque = ValorSaque % 50
+        const notasDeDez = Math.floor(ValorSaque/10)
+        ValorSaque = ValorSaque % 10
+        const notasDeCinco = Math.floor(ValorSaque/5)
+        ValorSaque = ValorSaque % 5
+        const notasDeUm = ValorSaque
+        if (notasDeCem > 0 ) mensagem = (`Notas de cem: ${notasDeCem} <br>`)
+        if (notasDeCinquenta > 0) mensagem = mensagem + (`Notas de cinquenta: ${notasDeCinquenta} <br>`)
+        if (notasDeDez > 0) mensagem += (`Notas de dez: ${notasDeDez} <br>`)
+        if (notasDeCinco) mensagem += (`Notas de cinco: ${notasDeCinco} <br>`)
+        if (notasDeUm) mensagem += (`Notas de um: ${notasDeUm} <br>`)
+    } else {
+        document.write (`Valor inválido`)
+    }
+    document.write (`${mensagem}`)
 
 
 </script>

@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     /*
     //PROBLEMA
@@ -10,31 +11,37 @@
     Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
     
-    let numero = Number(prompt("Digite um número menor que 1000"))
-    let mensagem = (`${numero}`)
+    const numero = Number(prompt("Digite um número menor que 1000"))
+    let mensagem = ""
 
-    if (numero >= 200 && numero < 1000) {
-        mensagem = (` ${Math.floor(numero/100)} centenas, `)
-        numero = numero - Math.floor(numero/100)*100
-    } else if (numero <= 199 && numero >= 100) {
-        mensagem = (`1 centena`)
-        numero = numero - Math.floor(numero/100)*100
-    } else {}
+    if (numero < 1000) {
+        const centenas = Math.floor(numero/100)
+        const dezenas = Math.floor(numero/10) - (centenas*10)
+        const unidades = numero - Math.floor(numero/10) * 10
 
-    if (numero >= 20 && numero % 10 !== 0) {
-        mensagem = mensagem + (` ${Math.floor(numero/10)} dezenas, `)
-        numero = numero - mensagem*10
-    } else if (numero >= 10 && numero < 20) {
-        mensagem = mensagem + (`1 dezena, `)
-        numero = numero - mensagem*10
-    } else {}
+        if (centenas > 0 ) {
+            mensagem += `${centenas} centena`
+            if ( centenas > 1) mensagem += `s`
 
-    if (numero >= 2 && numero < 1000) {
-        mensagem = mensagem + (` ${numero} unidades.`)
-        unidades = (`${numero}`)
-    } else if (numero == 1) {
-        mensagem = mensagem + (` ${numero} unidades.`)
-    } else {}
+
+            if (dezenas > 0 || unidades > 0) {
+                if (dezenas > 0 && unidades > 0) mensagem += `, `
+                else mensagem += ` e `
+            }
+        }
+        if (dezenas > 0) {
+            mensagem += `${dezenas} dezena`
+            if (dezenas > 1) mensagem += `s`
+
+            if (unidades > 0) mensagem += ` e `
+        }
+        if (unidades > 0) {
+            mensagem += `${unidades} unidade`
+            if (unidades > 1) mensagem += `s`
+        }
+    } else {
+        mensagem = `número inválido`
+    }
 
     document.write(`${mensagem}`)
 
