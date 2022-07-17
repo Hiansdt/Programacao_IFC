@@ -1,3 +1,4 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <script>
     /*
     //PROBLEMA
@@ -9,14 +10,22 @@
     - "Já trabalhou com a vítima?"
     O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
-
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
+    alert (`responda todas as perguntas com "0" para "não", e "1" para "sim"`)
+    const telefone = parseInt(prompt("Telefonou para a vítima?"))
+    const local = parseInt(prompt("Esteve no local do crime?"))
+    const morar = parseInt(prompt("Mora perto da vítima?"))
+    const divida = parseInt(prompt("Devia para a vítima?"))
+    const trabalho = parseInt(prompt("Já trabalhou com a vítima?"))
     
-    //SAÍDA
-
-
+    const calculo = telefone + local + morar + divida + trabalho 
+    
+    let classificacao = ""
+    
+    if (calculo === 2) {classificacao = "suspeito" }
+    else if (calculo === 3 || calculo === 4) {classificacao = "Cúmplice"}
+    else if (calculo === 5){ classificacao = "Assassino"}
+    else if (calculo === 0 || calculo === 1) {classificacao = "Inocente"}
+    else {classificacao = "resposta inválida"}
+    
+    document.write(`classificação: ${classificacao}`)
 </script>

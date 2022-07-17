@@ -5,13 +5,32 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
+    const hemisferio = prompt("Digite seu hemisfério")
+    const mes = parseInt(prompt("digite o número do mês em que você está"))
+    const dia = parseInt(prompt("Digite o dia do mês em que você está"))
     
-    //SAÍDA
+    let estacao = ""
+    
+    if (hemisferio == "norte") {
+        if (mes < 4) estacao = 3
+        else if (mes < 7) estacao = 4
+        else if (mes < 10) estacao = 1
+        else primavera = 2
+        
+    } else if (hemisferio == "sul") {
+        if (mes < 4) estacao = 1
+        else if (mes < 7) estacao = 2
+        else if (mes < 10) estacao = 3
+        else primavera = 4
+    }
+    if (dia > 21) {
+        estacao = estacao + 1
+    } 
+    if (estacao == 1) estacao = "verão"
+    else if (estacao == 2) estacao = "outono"
+    else if (estacao == 3) estacao = "inverno"
+    else if (estacao == 4) estacao = "primavera"
+    document.write(`A estação atual é ${estacao}`)
 
 
 </script>
