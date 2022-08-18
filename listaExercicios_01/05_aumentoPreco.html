@@ -1,0 +1,16 @@
+<meta charset="UTF-8" />
+<script>
+    //Problema: Aumento de Preço
+    //Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+        //- até 280(inclusive): aumento de 20 %
+        //- até 700(inclusive): aumento de 15 %
+        //- até 1500(inclusive): aumento de 10 %
+        //- acima de 1500: aumento de 5 %
+    
+    const preco = Number(prompt("Digite o preço do produto"))
+
+    precoComAumento = preco <= 280 ? preco*1.2 : preco <= 700 ? preco*1.15 : preco <= 1500 ? preco*1.1 : preco*1.05
+
+    document.write("O novo preço é R$" + precoComAumento)
+
+</script>
