@@ -17,7 +17,7 @@
 
     const contasTotal = agua + energia + telefone + mercado
 
-    let resposta = salario - contasTotal < 0 ? `Faltam ${(salario - contasTotal) - 2*salario-contasTotal} para pagar suas contas` : `Sobraram R$${salario-contasTotal}`
+    let resposta = salario - contasTotal < 0 ? `Faltam ${(salario - contasTotal) * -1} para pagar suas contas` : `Sobraram R$${salario-contasTotal}`
 
     document.write(resposta)
 </script>
