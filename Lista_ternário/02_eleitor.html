@@ -5,7 +5,7 @@
 
     const anoDeNascimento = Number(prompt("Digite seu ano de nascimento"))
 
-    let resposta = anoDeNascimento < 2006 ? "Você não pode votar" : "Você pode votar!" 
+    let resposta = anoDeNascimento <= 2006 ? "Você pode votar" : "Você não pode votar" 
 
     document.write(resposta)
 </script>

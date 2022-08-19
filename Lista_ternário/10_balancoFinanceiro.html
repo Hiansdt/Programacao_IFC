@@ -1,4 +1,4 @@
-<meta http-equiv= Number(prompt(Digite a despesa mensal de "Content-Type" content= Number(prompt("Digite a despesa mensal de "text/html;charset= Number(prompDigite a despesa mensal de UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script>
     //Problema: Balanço financeiro
     // Faça um script que peça para o usuário informar as despesas relacionadas com:
@@ -7,7 +7,7 @@
     // - Conta de telefone
     // - Supermercado
     // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
-    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    // Verifique se o usuário ganha mais do que paga e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     const agua = Number(prompt("Digite a despesa mensal de água"))
     const energia = Number(prompt("Digite a despesa mensal de energia"))
@@ -15,6 +15,9 @@
     const mercado = Number(prompt("Digite a despesa mensal de mercado"))
     const salario = Number(prompt("Digite seu salário mensal"))
 
-    
-    
+    const contasTotal = agua + energia + telefone + mercado
+
+    let resposta = salario - contasTotal < 0 ? `Faltam ${(salario - contasTotal) - 2*salario-contasTotal} para pagar suas contas` : `Sobraram R$${salario-contasTotal}`
+
+    document.write(resposta)
 </script>
