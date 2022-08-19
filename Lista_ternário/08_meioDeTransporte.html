@@ -9,7 +9,7 @@
     const litros = Number(prompt("Digite a quantidade de litros gastos para ir até o trabalho"))
     const transportePublico = Number(prompt("Digite o preço do transporte público"))
 
-    let transporteMaisBarato = precoLitro*litros > transportePublico ? "O transporte público é mais barato" : "O transporte próprio é mais barato"
+    let transporteMaisBarato = precoLitro*litros > transportePublico ? `O transporte público é mais barato e custa R$${(transportePublico*2).toFixed(2)} com ida e volta` : `O transporte próprio é mais barato e custa R$${(precoLitro*litros*2).toFixed(2)} de ida e volta`
 
     document.write(transporteMaisBarato)
     
