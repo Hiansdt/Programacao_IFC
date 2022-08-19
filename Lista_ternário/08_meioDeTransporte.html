@@ -5,13 +5,12 @@
     // Peça também ao programa para o usuário informar o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
-    //Entrada
+    const precoLitro = Number(prompt("Digite o preço do litro de combustível"))
+    const litros = Number(prompt("Digite a quantidade de litros gastos para ir até o trabalho"))
+    const transportePublico = Number(prompt("Digite o preço do transporte público"))
 
+    let transporteMaisBarato = precoLitro*litros > transportePublico ? "O transporte público é mais barato" : "O transporte próprio é mais barato"
 
-    //Processamento
-
-    
-    //Saída
-
+    document.write(transporteMaisBarato)
     
 </script>

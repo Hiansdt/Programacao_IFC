@@ -11,6 +11,8 @@
 
     const nota = Number(prompt("Digite sua nota"))
 
-    let conceito = nota >= 9 ? "A" : nota >= 8 
+    let conceito = nota >= 9 ? "A" : nota >= 8 ? "B" : nota >= 7 ? "C" : nota >= 6 ? "D" : "E"
+
+    document.write(`Sua nota é ${conceito}`)
 
 </script>
