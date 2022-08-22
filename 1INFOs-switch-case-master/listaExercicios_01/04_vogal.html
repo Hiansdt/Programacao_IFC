@@ -2,12 +2,24 @@
 <script>
     //PROBLEMA: Vogal - Construa um programa que leia um caractere e informe se este caractere é uma vogal.
 
-    // ENTRADA
+    const letra = prompt("Digite uma letra")
+    let vogal
 
-    
-    // PROCESSAMENTO
+    switch (letra) {
+        case "a" : vogal = "Vogal"
+        break;
+        case "e" : vogal = "Vogal"
+        break;
+        case "i" : vogal = "Vogal"
+        break;
+        case "o" : vogal = "Vogal"
+        break;
+        case "u" : vogal = "Vogal"
+        break;
 
-    
-    // SAÍDA
+        default: vogal = "Consoante"
+        break;
+    }
+    document.write(vogal)
 
 </script>

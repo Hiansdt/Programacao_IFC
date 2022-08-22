@@ -6,5 +6,41 @@
     - inteiro ou decimal.
     */
 
+    const numero1 = Number(prompt("Digite o primeiro número"))
+    const numero2 = Number(prompt("Digite o segundo número"))
+    const operacao = prompt("Que operação deseja realizar? (x , / , + , -)")
+
+    let resultado;
+    let parImpar;
+    let posNeg;
+    let intDec;
+
+    switch (operacao) {
+        case "x" : resultado = numero1 * numero2
+        break;
+        case "/" : resultado = numero1 / numero2
+        break;
+        case "+" : resultado = numero1 + numero2
+        break;
+        case "-" : resultado = numero1 - numero2
+        break;
+
+        default: resultado = "Operação inválida"
+        break;
+    }
+
+    switch (resultado%2) {
+        case 0 : parImpar = "par"
+        break;
+        case 1 : parImpar = "Ímpar"
+        break;
+
+        default: parImpar = Inválido
+        break;
+    }
+
+switch (resultado)
+
+//  NÃO DA PRA FAZER
    
 </script>
