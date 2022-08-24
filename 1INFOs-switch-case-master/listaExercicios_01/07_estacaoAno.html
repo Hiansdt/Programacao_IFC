@@ -4,12 +4,70 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    const hemisferio = prompt("Digite seu hemisfério").toLowerCase()
+    const mes = Number(prompt("Digite o número do seu mês"))    
+    let estacao;
 
+    switch (hemisferio) {
+        case "sul": switch (mes) {
+            case 1:
+            case 2:
+            case 3: estacao = "Verão"
+                
+                break;
+            case 4:
+            case 5:
+            case 6: estacao = "Outono"
 
-    //PROCESSAMENTO
+            break;
+            case 7:
+            case 8:
+            case 9: estacao = "Inverno"
 
-    
-    //SAÍDA
+            break;
 
+            case 10:
+            case 11:
+            case 12: estacao = "Primavera"
+
+            break;
+        
+            default: "Mês inválido"
+                break;
+        }
+        break;
+
+        case "norte": switch (mes) {
+            case 1:
+            case 2:
+            case 3: estacao = "Inverno"
+                
+                break;
+            case 4:
+            case 5:
+            case 6: estacao = "Primavera"
+            break;
+
+            case 7:
+            case 8:
+            case 9: estacao = "Verão"
+
+            break;
+
+            case 10:
+            case 11:
+            case 12: estacao = "Outono"
+
+            break;
+        
+            default: "Mês inválido"
+                break;
+        }
+        break;
+
+    default: "Hemisfério Inválido"
+        break;
+    }
+
+    document.write(estacao)
 </script>

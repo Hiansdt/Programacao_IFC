@@ -9,11 +9,11 @@
     O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
     alert("Responda `1` para Sim e `0` para Não")
-    const p1 = prompt("Telefonou para a Vítima?")
-    const p2 = prompt("Esteve no local do crime?")
-    const p3 = prompt("Mora perto da vítima?")
-    const p4 = prompt("Devia para a vítima?")
-    const p5 = prompt("Já trabalhou com a vítima?")
+    const p1 = Number(prompt("Telefonou para a Vítima?"))
+    const p2 = Number(prompt("Esteve no local do crime?"))
+    const p3 = Number(prompt("Mora perto da vítima?"))
+    const p4 = Number(prompt("Devia para a vítima?"))
+    const p5 = Number(prompt("Já trabalhou com a vítima?"))
     let classifacacao;
     switch (p1+p2+p3+p4+p5) {
         case 1 : classifacacao = "Inocente"
