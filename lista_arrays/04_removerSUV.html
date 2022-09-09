@@ -5,12 +5,18 @@
     //Pergunte ao usuário qual carro deseja REMOVER da lista.
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
-    //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+
+    alert(`Os carros são ${carrosSUV.join(", ")}`)
+
+    const pergunta = prompt("Qual carro deseja remover da lista?")
+
+    let carroARemover = pergunta === "Tiggo" ? 1 : pergunta === "Sportage" ? 2 : pergunta === "Tucson" ? 3 : 4
+
+    carrosSUV1 = carrosSUV.splice(carroARemover)
 
 
-    //PROCESSAMENTO
+    document.write(carrosSUV1)
 
-
-    //SAÍDA
 
 </script>

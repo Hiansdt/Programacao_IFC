@@ -1,13 +1,21 @@
 <script>
-    //Problema: Array em ordem decrescente
-    //Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
-    //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
+    /*Problema: Array em ordem decrescente
+    Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
+    Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).*/
 
-    const numero1 = Number(prompt("Digite o primeiro número"));
-    const numero2 = Number(prompt("Digite o segundo número"));
-    const numero3 = Number(prompt("Digite o terceiro número"));
+    const n1 = Number(prompt("Digite o primeiro número"));
+    const n2 = Number(prompt("Digite o segundo número"));
+    const n3 = Number(prompt("Digite o terceiro número"));
 
-    if (numero1 > numero2 && numero2 > numero3) {
-        
-    }
+    // 123, 321, 213, 132, 312, 231.
+
+    let resultado = 
+    n1 <= n2 && n2 <= n3 ? [n3, n2, n1] : 
+    n3 <= n2 && n2 <= n1 ? [n1, n2, n3] : 
+    n2 <= n1 && n1 <= n3 ? [n3, n1, n2] : 
+    n1 <= n3 && n3 <= n2 ? [n2, n3, n1] : 
+    n3 <= n1 && n1 <= n2 ? [n2, n1 ,n3] : 
+    [n1, n2, n3]
+
+    alert(resultado)
 </script>

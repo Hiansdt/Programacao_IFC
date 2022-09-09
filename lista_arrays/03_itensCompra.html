@@ -7,12 +7,9 @@
     //As bebidas a serem compradas são: bebida1, bebida2, bebida3.
     //A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
 
-    //ENTRADA
+    const frutas = [prompt("Digite a fruta 1"), prompt("Digite a fruta 2"), prompt("Digite a fruta 3")]
+    const bebidas = [prompt("Digite a bebida 1"), prompt("Digite a bebida2"), prompt("Digite a bebida 3")]
+    const listaDeCompras = frutas.concat(bebidas)
 
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    document.write(listaDeCompras.join(", "))
 </script>
