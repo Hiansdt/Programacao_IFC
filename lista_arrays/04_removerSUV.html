@@ -6,17 +6,17 @@
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSUVNovo = carrosSUV.slice()
 
     alert(`Os carros são ${carrosSUV.join(", ")}`)
 
-    const pergunta = prompt("Qual carro deseja remover da lista?")
+    const pergunta = prompt("Qual carro deseja remover da lista?").toLowerCase()
 
-    let carroARemover = pergunta === "Tiggo" ? 1 : pergunta === "Sportage" ? 2 : pergunta === "Tucson" ? 3 : 4
+    let carroARemover = pergunta === "tiggo" ? 0 : pergunta === "sportage" ? 1 : pergunta === "tucson" ? 2 : 3
 
-    carrosSUV1 = carrosSUV.splice(carroARemover)
+    carrosSUVNovo.splice(carroARemover, 1)
 
-
-    document.write(carrosSUV1)
+    document.write(`Lista antiga: ${carrosSUV.join(", ")} <br> Lista nova: ${carrosSUVNovo}.join(", ")`)
 
 
 </script>

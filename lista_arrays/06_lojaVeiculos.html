@@ -9,12 +9,46 @@
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
 
+    let carrosSUVNovo = carrosSUV.slice()
+    let carrosSedanNovo = carrosSedan.slice()
+    let carrosHatchNovo = carrosHatch.slice()
 
-    //PROCESSAMENTO
+    alert("Digite 3 veículos a serem adicionados")
 
+    const veiculo1 = prompt("Digite o veículo 1:").toLowerCase()
+    const tipo1 = prompt("Digite o tipo do veículo 1 (SUV, Sedan, Hatch)").toLowerCase()
+    const veiculo2 = prompt("Digite o veículo 2:").toLowerCase()
+    const tipo2 = prompt("Digite o tipo do veículo 2 (SUV, Sedan, Hatch)").toLowerCase()
+    const veiculo3 = prompt("Digite o veículo 3:").toLowerCase()
+    const tipo3 = prompt("Digite o tipo do veículo 3 (SUV, Sedan, Hatch)").toLowerCase()
 
-    //SAÍDA
+    if (tipo1 === "suv") {
+        carrosSUVNovo.push(veiculo1)
+    } else if (tipo1 === "sedan") {
+        carrosSedanNovo.push(veiculo1)
+    } else if (tipo2 === "hatch") {
+        carrosHatchNovo.push(veiculo1)
+    } else document.write(`veículo 1 - tipo inválido <br>`)
 
+    if (tipo2 === "suv") {
+        carrosSUVNovo.push(veiculo2)
+    } else if (tipo2 === "sedan") {
+        carrosSedanNovo.push(veiculo2)
+    } else if (tipo2 === "hatch") {
+        carrosHatchNovo.push(veiculo2)
+    } else document.write(`veículo 2 - tipo inválido <br>`)
+
+    if (tipo3 === "suv") {
+        carrosSUVNovo.push(veiculo3)
+    } else if (tipo3 === "sedan") {
+        carrosSedanNovo.push(veiculo3)
+    } else if (tipo3 === "hatch") {
+        carrosHatchNovo.push(veiculo3)
+    } else document.write(`veículo 3 - tipo inválido <br>`)
+
+    document.write(`Listas antigas: <br> - <br> SUV: ${carrosSUV} <br> Sedan: ${carrosSedan} <br> Hatch: ${carrosHatch} <br> - <br> Listas novas: <br> - <br> SUV: ${carrosSUVNovo} <br> Sedan: ${carrosSedanNovo} <br> Hatch: ${carrosHatchNovo}`)
 </script>
