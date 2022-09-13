@@ -9,13 +9,17 @@
     //Caso não acerte, o programa deverá retornar:
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
-    //ENTRADA
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const corInformada = prompt(`informe uma cor entre: ${nomeCores}`).toLowerCase();
+    let aleatorio = Math.floor(Math.random()*7)
 
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    if (nomeCores.indexOf(corInformada) === aleatorio) {
+        document.write(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada.toUpperCase()}`)
+    } else if (nomeCores.indexOf(corInformada) === -1) {
+        document.write(`Cor inválida!`)
+    } else if (nomeCores.indexOf(corInformada) !== aleatorio) {
+        document.write(`NÃO FOI DESSA VEZ... TENTE NOVAMENTE!`)
+    }
 
 
 

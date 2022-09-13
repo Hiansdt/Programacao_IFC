@@ -5,7 +5,11 @@
 
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
-    const palavra = prompt("Digite uma palavra")
-    const letra = prompt("Digite uma letra a ser pesquisada na palavra")
+    const palavra = prompt("Digite uma palavra").toLowerCase()
+    const letra = prompt("Digite uma letra a ser pesquisada na palavra").toLowerCase()
+    let array = Array.from(palavra)
 
+    let resposta = array.indexOf(letra) !== -1 ? `A letra existe na palavra e está na posição ${array.indexOf(letra)}` : `A letra não existe na palavra`
+
+    document.write(resposta)
 </script>
