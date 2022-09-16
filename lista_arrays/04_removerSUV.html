@@ -7,12 +7,17 @@
 
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     let carrosSUVNovo = carrosSUV.slice()
-    const pergunta = prompt(`A lista é ${carrosSUV.join(", ")}. Qual carro deseja remover?`).toLowerCase()
+    const pergunta = prompt(`A lista é ${carrosSUV.join(", ")}. Qual carro deseja remover? (NÃO. SE. ESQUEÇA. DA. PRIMEIRA. LETRA. MAIÚSCULA.)`)
 
-    let carroARemover = pergunta === "tiggo" ? 0 : pergunta === "sportage" ? 1 : pergunta === "tucson" ? 2 : 3
+    let carroARemover = carrosSUV.indexOf(pergunta)
+
     carrosSUVNovo.splice(carroARemover, 1)
-    
-    document.write(`Lista antiga: ${carrosSUV.join(", ")} <br> Lista nova: ${carrosSUVNovo.join(", ")}`)
+
+    if (carroARemover >= 0) {
+        document.write(`Lista antiga: ${carrosSUV.join(", ")} <br> Lista nova: ${carrosSUVNovo.join(", ")}`)
+    } else {
+        document.write(`O carro digitado não está na lista`)
+    }
 
 
 </script>

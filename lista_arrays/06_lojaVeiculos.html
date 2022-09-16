@@ -20,33 +20,33 @@
     alert("Digite 3 veículos a serem adicionados")
 
     const veiculo1 = prompt("Digite o veículo 1:").toLowerCase()
-    const tipo1 = prompt("Digite o tipo do veículo 1 (SUV, Sedan, Hatch)").toLowerCase()
+    const tipo1 = Number(prompt("Digite o tipo do veículo 1 (1 = SUV, 2 = Sedan, 3 = Hatch)"))
     const veiculo2 = prompt("Digite o veículo 2:").toLowerCase()
-    const tipo2 = prompt("Digite o tipo do veículo 2 (SUV, Sedan, Hatch)").toLowerCase()
+    const tipo2 = Number(prompt("Digite o tipo do veículo 2 (1 = SUV, 2 = Sedan, 3 = Hatch)"))
     const veiculo3 = prompt("Digite o veículo 3:").toLowerCase()
-    const tipo3 = prompt("Digite o tipo do veículo 3 (SUV, Sedan, Hatch)").toLowerCase()
+    const tipo3 = Number(prompt("Digite o tipo do veículo 3 (1 = SUV, 2 = Sedan, 3 = Hatch)"))
 
-    if (tipo1 === "suv") {
+    if (tipo1 === 1) {
         carrosSUVNovo.push(veiculo1)
-    } else if (tipo1 === "sedan") {
+    } else if (tipo1 === 2) {
         carrosSedanNovo.push(veiculo1)
-    } else if (tipo2 === "hatch") {
+    } else if (tipo2 === 3) {
         carrosHatchNovo.push(veiculo1)
     } else document.write(`veículo 1 - tipo inválido <br>`)
 
-    if (tipo2 === "suv") {
+    if (tipo2 === 1) {
         carrosSUVNovo.push(veiculo2)
-    } else if (tipo2 === "sedan") {
+    } else if (tipo2 === 2) {
         carrosSedanNovo.push(veiculo2)
-    } else if (tipo2 === "hatch") {
+    } else if (tipo2 === 3) {
         carrosHatchNovo.push(veiculo2)
     } else document.write(`veículo 2 - tipo inválido <br>`)
 
-    if (tipo3 === "suv") {
+    if (tipo3 === 1) {
         carrosSUVNovo.push(veiculo3)
-    } else if (tipo3 === "sedan") {
+    } else if (tipo3 === 2) {
         carrosSedanNovo.push(veiculo3)
-    } else if (tipo3 === "hatch") {
+    } else if (tipo3 === 3) {
         carrosHatchNovo.push(veiculo3)
     } else document.write(`veículo 3 - tipo inválido <br>`)
 
