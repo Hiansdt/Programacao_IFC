@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    let numeroParaMultiplicar = Number(prompt("Digite um número para calcular sua tabuada"))
+    let tabuada = Number(prompt("Até que número deseja multiplicar o número selecionado anteriormente?"))
+    let multiplicadores = [];
+
+    num = 0
+    while (multiplicadores.length < tabuada) {
+        num ++
+        multiplicadores.push(num)
+    }
+
+    for (let numero of multiplicadores) {
+        document.write(`${numeroParaMultiplicar} X ${numero} = ${numeroParaMultiplicar*numero} <br>`)
+    }
+</script>
