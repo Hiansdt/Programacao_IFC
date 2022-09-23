@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    const quantidade = Number(prompt(`Quantos números vc quer na sequência de Fibonacci`))
+    let fibonacci = [0, 1]
+
+    let num
+    for (let num = 1; num <= quantidade; num++) {
+        let soma = fibonacci[(fibonacci.length) - 1 ] + fibonacci[((fibonacci.length) - 2 )]
+        fibonacci.push(soma)
+    }
+
+    document.write(fibonacci)
+</script>
