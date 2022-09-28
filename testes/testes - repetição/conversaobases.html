@@ -1,0 +1,41 @@
+<script>
+    let n = Number(prompt("Que numero sera convertido?"))
+    const base = Number(prompt("Digite a base para qual deseja converter o numero (2, 8, 16)"))
+    let arr = []
+
+    if (base === 2) {
+        arr.push(n%2)
+        while(n > 2) {
+            n = Math.floor(n/2)
+            arr.push(n%2)
+        }
+    } else if (base === 16) {
+        arr.push(n%16)
+        while(n > 16) {
+            n = Math.floor(n/16)
+            if (n%16 === 15) {
+                arr.push("F")
+            } else if (n%16 === 14) {
+                arr.push("E")
+            } else if (n%16 === 13) {
+                arr.push("D")
+            } else if (n%16 === 12) {
+                arr.push("C")
+            } else if (n%16 === 11) {
+                arr.push("B")
+            } else if (n%16 === 10) {
+                arr.push("A")
+            } else {
+                arr.push(n%16)
+            }
+        }
+    } else if (base === 8) {
+        arr.push(n%8)
+        while(n > 8) {
+            n = Math.floor(n/8)
+            arr.push(n%8)
+        }
+    }
+    document.write(`O número na base ${base} é (${(arr.reverse()).join("")})     ${n}`)
+
+</script>
