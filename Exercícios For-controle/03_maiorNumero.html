@@ -6,12 +6,22 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    //ENTRADA
+    let quantNumeros = Number(prompt("Digite quantos números vc quer testar"))
+    let numeros = []
 
+    for (let i = 1; i <= quantNumeros; i++) {
+        numeros.push(Number(prompt(`Digite o número ${1}`)))
+    }
 
-    //PROCESSAMENTO
+    let numeroMaior = 0
 
+    for (let j = 1; j <= numeros.length; j++) {
+        if(numeros[j] >= numeroMaior) {
+            numeroMaior = numeros[j]
+        }
+    }
 
-    //SAÍDA
+    document.write(`Números: (${numeros.join(", ")}) <br> Número maior: ${numeroMaior}`)
+
 
 </script>

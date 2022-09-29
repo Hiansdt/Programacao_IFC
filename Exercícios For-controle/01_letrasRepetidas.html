@@ -9,12 +9,15 @@
     **Apresente apenas letras minúsculas!
     */
 
-    //ENTRADA
+    let listaDeNumeros = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let listaNova = []
 
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    for (let i = 0; i <= listaDeNumeros.length - 1; i++) {
+        if (listaNova.indexOf(listaDeNumeros[i].toLowerCase()) === -1) {
+            listaNova.push(listaDeNumeros[i].toLowerCase())
+        }
+    }
+    
+    document.write(listaNova.join(", "))
 
 </script>
