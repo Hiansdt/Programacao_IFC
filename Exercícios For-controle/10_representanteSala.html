@@ -7,12 +7,53 @@
     Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
     */
 
-    //ENTRADA
+    let candidatos = [prompt("Digite o nome do 1 ° candidato "), prompt("Digite o nome 2 ° candidato "), prompt("Digite o nome do 3° candidato ")]
 
+    const alunosVotantes = Number(prompt("Digite a quantidade e alunos votantes "))
+    
+    let candidatosVotos = [[],[],[]]
 
-    //PROCESSAMENTO
+    let voto
 
+    for (i = 1; i <= alunosVotantes; i++) {
+        voto = Number(prompt(`candidatos: ${candidatos}. Em qual deseja votar? ( 1, 2 ou 3 )`))
+        if (voto === 1) {
+            candidatosVotos[0].push(voto)
+        } else if (voto === 2) {
+            candidatosVotos[1].push(voto)
+        } else if (voto === 3) {
+            candidatosVotos[2].push(voto)
+        } else {
+        alert("Voto inválido ")
+    }}
+    
+    let vencedor
+    
+    if (candidatosVotos[0] > candidatosVotos[1] && candidatosVotos[0]> candidatosVotos[2]) {
+        vencedor = candidatos[0]
+    } else if (candidatosVotos[1] > candidatosVotos[0] && candidatosVotos[1]> candidatosVotos[2]) {
+        vencedor = candidatos[1]
+    }
+      else if (candidatosVotos[2] > candidatosVotos[1] && candidatosVotos[2]> candidatosVotos[0]) {
+          vencedor = candidatos[2]
+      }
+      else if (candidatosVotos[0] === candidatosVotos[1] && candidatosVotos[2] !== candidatosVotos[0]) {
+          vencedor = candidatos[2]
+      }else if (candidatosVotos[1] ===
+       candidatosVotos[2] && candidatosVotos[1] !== candidatosVotos[0]) {
+          vencedor = candidatos[2]
+      }else if (candidatosVotos[2] > candidatosVotos[1] && candidatosVotos[2]> candidatosVotos[0]) {
+          vencedor = candidatos[2]
+      }else if (candidatosVotos[2] > candidatosVotos[1] && candidatosVotos[2]> candidatosVotos[0]) {
+          vencedor = candidatos[2]
+      }
+      
+    
+    const porcentagemCandidato1 = 100 / (candidatos[0].length / alunosVotantes)
 
-    //SAÍDA
-
-</script>
+    const porcentagemCandidato2 = 100 / (candidatos[1].length / alunosVotantes) 
+    
+    const porcentagemCandidato3 = 100 / (candidatos[2].length / alunosVotantes)
+    
+    document.write(`${vencedor}, ${candidatosVotos.join(". ")}`)
+    </script>

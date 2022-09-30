@@ -4,13 +4,20 @@
     PROBLEMA
     Faça um programa que leia 5 números e informe a soma e média dos números.
     */
-
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    
+    const QuantNumeros = Number(prompt("De quantos números quer fazer a média?"))
+    let numeros = []
+    for (i = 1; i <= QuantNumeros; i++) {
+        numeros.push(Number(prompt(`Digite o ${i}° número`)))
+    }
+    
+    let soma = 0
+    
+    for (j = 0; j <= numeros.length -1; j++) {
+        soma = soma + numeros[j]
+    }
+    
+    let media = soma/QuantNumeros
+    
+    document.write(`A soma dos números é igual a ${soma} e a média é igual a ${media}`)
 </script>

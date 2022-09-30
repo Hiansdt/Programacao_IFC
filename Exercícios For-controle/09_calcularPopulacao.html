@@ -5,12 +5,22 @@
     Considere que a população de uma cidade seja de 50000 habitantes, crescendo 1,5% ao ano. Apresente em tela a população prevista para um prazo de 5 anos e um prazo de 10 anos. Apresente os dados em tela.
     */
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    let habitantesInicial = Number(prompt("digite a quantidade de habitantes"))
+    const prazo1 = Number(prompt("Digite o primeiro prazo de anos para a população"))
+    const prazo2 = Number(prompt("digite o segundo prazo de anos para o cálculo da população"))
+    const taxa = Number(prompt("Digite a taxa de crescimento em porcentagem"))
+    
+    let habitantesPrazo1 = habitantesInicial
+    let habitantesPrazo2 = habitantesInicial
+    
+    for (trimestres1 = 1; trimestres1 <= prazo1*4; trimestres1++) {
+        habitantesPrazo1 += habitantesPrazo1*(taxa/100/4)
+    }
+    
+    for (trimestres2 = 1; trimestres2 <= prazo2*4; trimestres2++) {
+        habitantesPrazo2+= habitantesPrazo2*(taxa/100/4)
+    }
+    
+    document.write(`Em ${prazo1} anos, a população será cerca de ${parseInt(habitantesPrazo1)} habitantes, e em ${prazo2} anos, será de aprox. ${parseInt(habitantesPrazo2)} habitantes (margem de erro de algumas dezenas, dependendo dos valores)`)
 
 </script>
