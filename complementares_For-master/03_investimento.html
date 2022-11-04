@@ -1,0 +1,19 @@
+<script>
+    //PROBLEMA
+    /*
+    Considere que uma pessoa está investindo, no início de cada mês, uma quantia de R$ 100,00. O rendimento ao final do mês é de 1,8% (0.018).
+    Calcule qual será o total que a pessoa terá investido ao final de 24 meses, ao final de 48 meses e ao final de 96 meses.
+    Apresente os valores para cada um dos períodos.
+    Apresente também qual foi o rendimento que a pessoa obteve em cada um dos períodos (ou seja, o que conseguiu obter além da quantia investida).
+    */
+
+    let meses = Number(prompt("Digite a quantidade de meses para qual calcular o rendimento"));
+    let investidoTotal = 0;
+    for (i = 0; i < meses; i++) {
+        investidoTotal += 100 * 1.018;
+    }
+    lucro = investidoTotal - (100 * meses);
+    lucro = Math.ceil(lucro * 100);
+    lucro = lucro/100;
+    document.write(`O total em investimentos é de R$${investidoTotal.toFixed(2)} e o total de lucros é de R$${lucro.toFixed(2)}`);
+</script>
